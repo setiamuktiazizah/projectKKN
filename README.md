@@ -1,2 +1,2 @@
 # FuzzyAHP
-Sistem penunjang keputusan varietas bibit cabai kriting terbaik dengan menerapkan metode Fuzzy AHP
+Sistem Pendukung Keputusan dalam Penentuan Program Kerja yang Sesuai dengan Desa Tempat Pelaksanaan KKN dengan menerapkan metode Fuzzy AHP
