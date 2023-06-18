@@ -28,7 +28,7 @@ if (isset($_GET['delete'])) {
               <th>No</th>
               <th>Nama</th>
               <th>Username</th>
-              <th>Password</th>
+              <!-- <th>Password</th> -->
               <!-- <th>Peran</th> -->
               <th>Aksi</th>
             </tr>
@@ -46,7 +46,7 @@ if (isset($_GET['delete'])) {
                 <td><?= $no ?></td>
                 <td><?= $row['nama'] ?></td>
                 <td><?= $row['username'] ?></td>
-                <td><?= $row['password'] ?></td>
+                <!-- <td><?= $row['password'] ?></td> -->
                 <!-- <td><?= $row['peran'] ?></td> -->
                 <td>
                   <a href="index.php?p=user&act=edit&id=<?= $row['id_user'] ?>" class="btn btn-primary"><i class="glyphicon glyphicon-edit"></i></a>
@@ -56,14 +56,6 @@ if (isset($_GET['delete'])) {
             <?php endwhile; ?>
           </tbody>
           <tfoot>
-            <tr>
-              <th>No</th>
-              <th>Nama</th>
-              <th>Username</th>
-              <th>Password</th>
-              <th>Peran</th>
-              <th>Aksi</th>
-            </tr>
           </tfoot>
         </table>
       </div>

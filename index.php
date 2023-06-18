@@ -104,8 +104,8 @@ if (isset($_GET['logout'])) {
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="?p=user&act=create"><i class="fa fa-circle-o"></i> Buat User </a></li>
-                <li><a href="?p=user"><i class="fa fa-circle-o"></i> Data User</a></li>
+                <!-- <li><a href="?p=user&act=create"><i class="fa fa-circle-o"></i> Buat User </a></li> -->
+                <li><a href="?p=user&act=view"><i class="fa fa-circle-o"></i> Data User</a></li>
               </ul>
             </li>
             <li class="treeview <?= (@$_GET['p'] == 'project') ? 'active' : '' ?>">
@@ -190,12 +190,10 @@ if (isset($_GET['logout'])) {
 
         switch ($page) {
           case 'user':
-            if ($action == "create") {
-              include 'page/user/create.php';
-            } else if ($action == "edit") {
-              include 'page/user/edit.php';
-            } else {
+            if ($action == "view") {
               include 'page/user/index.php';
+            } else {
+              include 'page/user/edit.php';
             }
             break;
 
