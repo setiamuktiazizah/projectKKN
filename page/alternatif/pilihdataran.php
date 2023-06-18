@@ -2,7 +2,7 @@
 
 if (isset($_POST['simpan'])) {
 
-  echo "<script>window.location.href='index.php?p=alternatif&d=$_POST[dataran]'</script>";
+  echo "<script>window.location.href='index.php?p=alternatif&d=$_POST[bidang]'</script>";
 }
 
 ?>
@@ -13,19 +13,19 @@ if (isset($_POST['simpan'])) {
     <!-- general form elements -->
     <div class="box box-primary">
       <div class="box-header with-border">
-        <h3 class="box-title">Pilih Dataran Wilayah</h3>
+        <h3 class="box-title">Pilih Bidang Project KKN</h3>
       </div>
       <!-- /.box-header -->
       <!-- form start -->
       <form role="form" method="post">
         <div class="box-body">
           <div class="form-group">
-            <label for="exampleInputEmail1">Dataran</label>
-            <select name="dataran" class="form-control">
-              <option value="">-- Pilih Dataran --</option>
-              <option value="rendah">Rendah (0-200 Mdpl)</option>
-              <option value="sedang">Sedang (201-499 Mdpl)</option>
-              <option value="tinggi">Tinggi (500-1500 Mdpl)</option>
+            <label for="exampleInputEmail1">Bidang</label>
+            <select name="bidang" class="form-control">
+              <option value="">-- Pilih Bidang --</option>
+              <option value="kesehatan">Kesehatan</option>
+              <option value="pendidikan">Pendidikan</option>
+              <option value="teknologi">Teknologi</option>
             </select>
           </div>
         </div>

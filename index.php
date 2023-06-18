@@ -22,7 +22,7 @@ if (isset($_GET['logout'])) {
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Fuzzy AHP</title>
+  <title>SPK Project KKN</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
@@ -108,7 +108,7 @@ if (isset($_GET['logout'])) {
                 <li><a href="?p=user"><i class="fa fa-circle-o"></i> Data User</a></li>
               </ul>
             </li>
-            <li class="treeview <?= (@$_GET['p'] == 'cabai') ? 'active' : '' ?>">
+            <li class="treeview <?= (@$_GET['p'] == 'project') ? 'active' : '' ?>">
               <a href="#">
                 <i class="fa fa-calendar"></i> <span>Project KKN</span>
                 <span class="pull-right-container">
@@ -116,8 +116,8 @@ if (isset($_GET['logout'])) {
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="?p=cabai&act=create"><i class="fa fa-circle-o"></i> Tambah Project KKN </a></li>
-                <li><a href="?p=cabai"><i class="fa fa-circle-o"></i> Data Project KKN</a></li>
+                <li><a href="?p=project&act=create"><i class="fa fa-circle-o"></i> Tambah Project KKN </a></li>
+                <li><a href="?p=project"><i class="fa fa-circle-o"></i> Data Project KKN</a></li>
               </ul>
             </li>
             <li class="treeview <?= (@$_GET['p'] == 'criteria') ? 'active' : '' ?>">
@@ -219,13 +219,13 @@ if (isset($_GET['logout'])) {
             }
             break;
 
-          case 'cabai':
+          case 'project':
             if ($action == "create") {
-              include 'page/cabai/create.php';
+              include 'page/project/create.php';
             } else if ($action == "edit") {
-              include 'page/cabai/edit.php';
+              include 'page/project/edit.php';
             } else {
-              include 'page/cabai/index.php';
+              include 'page/project/index.php';
             }
             break;
 

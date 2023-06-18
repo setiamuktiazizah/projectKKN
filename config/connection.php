@@ -1,10 +1,8 @@
-<?php 
+<?php
 
-	$host = "localhost";
-	$user = "root";
-	$pass = "";
-	$db   = "fuzzy_ahp";
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db   = "spkkkn";
 
-	$con = mysqli_connect($host, $user, $pass, $db);
-
- ?>
+$con = mysqli_connect($host, $user, $pass, $db);

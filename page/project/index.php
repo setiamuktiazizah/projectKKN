@@ -2,10 +2,10 @@
 
 if (isset($_GET['delete'])) {
   $id = $_GET['id'];
-  $sql = "delete from cabai where id_cabai='$id'";
+  $sql = "delete from project where id_project='$id'";
   $query = mysqli_query($con, $sql);
   if ($query) {
-    echo "<script>alert('Data berhasil dihapus!');window.location.href='index.php?p=cabai'</script>";
+    echo "<script>alert('Data berhasil dihapus!');window.location.href='index.php?p=project'</script>";
   } else {
     echo mysqli_error($con);
   }
@@ -27,36 +27,30 @@ if (isset($_GET['delete'])) {
             <tr>
               <th>Id</th>
               <th>Kriteria</th>
-              <th>Dataran</th>
+              <th>Bidang</th>
               <th>Aksi</th>
             </tr>
           </thead>
           <tbody>
             <?php
 
-            $sql = "select * from cabai";
+            $sql = "select * from project";
             $query = mysqli_query($con, $sql);
             while ($row = mysqli_fetch_assoc($query)) :
 
             ?>
               <tr>
-                <td><?= $row['id_cabai'] ?></td>
-                <td><?= $row['nama_cabai'] ?></td>
-                <td><?= $row['dataran'] ?></td>
+                <td><?= $row['id_project'] ?></td>
+                <td><?= $row['nama_project'] ?></td>
+                <td><?= $row['bidang'] ?></td>
                 <td>
-                  <a href="index.php?p=cabai&act=edit&id=<?= $row['id_cabai'] ?>" class="btn btn-primary"><i class="glyphicon glyphicon-edit"></i></a>
-                  <a href="index.php?p=cabai&delete&id=<?= $row['id_cabai'] ?>" class="btn btn-danger" onclick="return confirm('Apakah data akan dihapus?')"><i class="glyphicon glyphicon-trash"></i></a>
+                  <a href="index.php?p=project&act=edit&id=<?= $row['id_project'] ?>" class="btn btn-primary"><i class="glyphicon glyphicon-edit"></i></a>
+                  <a href="index.php?p=project&delete&id=<?= $row['id_project'] ?>" class="btn btn-danger" onclick="return confirm('Apakah data akan dihapus?')"><i class="glyphicon glyphicon-trash"></i></a>
                 </td>
               </tr>
             <?php endwhile; ?>
           </tbody>
           <tfoot>
-            <tr>
-              <th>Id</th>
-              <th>Kriteria</th>
-              <th>Dataran</th>
-              <th>Aksi</th>
-            </tr>
           </tfoot>
         </table>
       </div>

@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `fuzzy_ahp`
+-- Database: `spkkkn`
 --
 
 -- --------------------------------------------------------
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `alternatif` (
   `id_alternatif` int(11) NOT NULL,
-  `id_cabai` int(11) NOT NULL,
+  `id_project` int(11) NOT NULL,
   `lihat` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -40,20 +40,20 @@ CREATE TABLE `alternatif` (
 -- Table structure for table `cabai`
 --
 
-CREATE TABLE `cabai` (
-  `id_cabai` int(11) NOT NULL,
-  `nama_cabai` varchar(125) NOT NULL,
-  `dataran` varchar(25) NOT NULL
+CREATE TABLE `project` (
+  `id_project` int(11) NOT NULL,
+  `nama_project` varchar(125) NOT NULL,
+  `bidang` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `cabai`
+-- Dumping data for table `project`
 --
 
-INSERT INTO `cabai` (`id_cabai`, `nama_cabai`, `dataran`) VALUES
-(1, 'Rawit', 'rendah'),
-(2, 'Keriting', 'rendah'),
-(3, 'Jablay', 'sedang');
+INSERT INTO `project` (`id_project`, `nama_project`, `bidang`) VALUES
+(1, 'Penyuluhan terkait isu kesehatan (kebersihan, pola makan sehat, pencegahan penyakit, pentingnya imunisasi)', 'kesehatan'),
+(2, 'Kegiatan bimbingan belajar dalam membantu siswa memahami pelajaran dan meningkatkan kemampuan akademik mereka dengan menerapkan metode pembelajaran yang inovatif', 'pendidikan'),
+(3, 'Pelatihan dasar-dasar komputer (ms.office)', 'teknologi');
 
 -- --------------------------------------------------------
 
@@ -73,14 +73,15 @@ CREATE TABLE `desc_kriteria` (
 --
 
 INSERT INTO `desc_kriteria` (`id_desc`, `id_kriteria`, `deskripsi`, `nilai`) VALUES
-(1, 1, '< 0.8 kg - 1.0 kg', 1),
-(2, 1, '1.1 kg - 1.3 kg', 2),
-(3, 1, '1.3 kg - 1.5 kg', 3),
-(5, 2, 'Hibrida', 3),
-(6, 2, 'Non  Hibrida', 1),
-(7, 4, '< 100.000', 5),
-(8, 4, '101.000 - 130.000', 3),
-(9, 4, '131.000 - 160.000', 1);
+(1, 1, 'mudah (bisa dilalui kendaraan besar, hampir semua jalan diaspal)', 1),
+(2, 1, 'sedang (bisa dilalui roda 4 dan roda 2 tapi tidak bisa dilalui kendaraan besar, tidak semua jalan diaspal', 3),
+(3, 1, 'sulit (hanya bisa dilalui roda 2, hampir seluruh jalan tidak diaspal)', 9),
+(4, 2, 'sedikit', 7),
+(5, 2, 'sedang', 4),
+(6, 2, 'banyak', 2),
+(7, 3, 'dekat (<10 km)', 2),
+(8, 3, 'sedang (10-50 km)', 5),
+(9, 3, 'jauh (>50 km)', 7);
 
 -- --------------------------------------------------------
 
@@ -90,7 +91,7 @@ INSERT INTO `desc_kriteria` (`id_desc`, `id_kriteria`, `deskripsi`, `nilai`) VAL
 
 CREATE TABLE `kriteria` (
   `id_kriteria` int(11) NOT NULL,
-  `kriteria` varchar(125) NOT NULL
+  `kriteria` varchar(225) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -98,10 +99,9 @@ CREATE TABLE `kriteria` (
 --
 
 INSERT INTO `kriteria` (`id_kriteria`, `kriteria`) VALUES
-(1, 'Produksi yang dihasilkan'),
-(2, 'Jenis Tanaman'),
-(3, 'Tingkat dataran wilayah'),
-(4, 'Harga Bibit');
+(1, 'Sarana transportasi'),
+(2, 'Sumber air'),
+(3, 'Jarak desa ke pusat kota');
 
 -- --------------------------------------------------------
 
@@ -136,21 +136,14 @@ CREATE TABLE `nilai_kriteria` (
 
 INSERT INTO `nilai_kriteria` (`id_nilai`, `id_kriteria`, `baris`, `kolom`, `nilai`) VALUES
 (1, 1, 1, 1, 1),
-(2, 1, 1, 2, 3),
-(3, 1, 1, 3, 5),
-(4, 1, 1, 4, 3),
-(5, 2, 2, 2, 1),
-(6, 2, 2, 3, 7),
-(7, 2, 2, 4, 2),
-(8, 3, 3, 3, 1),
-(9, 3, 3, 4, 5),
-(10, 4, 4, 4, 1),
-(11, 2, 2, 1, 0.33333333333333),
-(12, 3, 3, 1, 0.2),
-(13, 3, 3, 2, 0.14285714285714),
-(14, 4, 4, 1, 0.33333333333333),
-(15, 4, 4, 2, 0.5),
-(16, 4, 4, 3, 0.2);
+(2, 1, 1, 2, 0.2),
+(3, 1, 1, 3, 0.143),
+(4, 2, 2, 2, 0.33),
+(5, 2, 2, 3, 1),
+(6, 3, 3, 3, 1),
+(7, 2, 2, 1, 5),
+(8, 3, 3, 1, 7),
+(9, 3, 3, 2, 3);
 
 -- --------------------------------------------------------
 
@@ -199,8 +192,8 @@ ALTER TABLE `alternatif`
 --
 -- Indexes for table `cabai`
 --
-ALTER TABLE `cabai`
-  ADD PRIMARY KEY (`id_cabai`);
+ALTER TABLE `project`
+  ADD PRIMARY KEY (`id_project`);
 
 --
 -- Indexes for table `desc_kriteria`
@@ -251,8 +244,8 @@ ALTER TABLE `alternatif`
 --
 -- AUTO_INCREMENT for table `cabai`
 --
-ALTER TABLE `cabai`
-  MODIFY `id_cabai` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+ALTER TABLE `project`
+  MODIFY `id_project` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `desc_kriteria`
