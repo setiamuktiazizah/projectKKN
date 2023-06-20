@@ -53,7 +53,7 @@ if (isset($_GET['logout'])) {
 
     <header class="main-header">
       <!-- Logo -->
-      <a href="index2.html" class="logo">
+      <a href="index.php" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini"><b>SPK </b>Project KKN</span>
         <!-- logo for regular state and mobile devices -->
@@ -65,7 +65,9 @@ if (isset($_GET['logout'])) {
         <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
           <span class="sr-only">Toggle navigation</span>
         </a>
-
+        <a href="login.php" style="float:right" role="button">
+          <span style="float:right; padding: 14px 16px; font-size:medium; color: white; background-color: #5bc0de"><b>Login</b></span>
+        </a>
         <div class="navbar-custom-menu">
           <ul class="nav navbar-nav">
 
@@ -235,7 +237,7 @@ if (isset($_GET['logout'])) {
             if (@$_GET['d'] != "")
               include 'page/alternatif/index.php';
             else
-              include 'page/alternatif/pilihdataran.php';
+              include 'page/alternatif/pilihbidang.php';
             break;
 
           case 'report':
