@@ -56,7 +56,7 @@ $sudah_isi = mysqli_num_rows($query);
       <!-- /.box-header -->
       <div class="box-body">
 
-        <?php if ($sudah_isi == 0 || !0) : ?>
+        <?php if ($sudah_isi == 0) : ?>
           <form method="post">
             <table class="table table-bordered table-striped">
               <thead>
