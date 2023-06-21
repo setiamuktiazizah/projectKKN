@@ -65,6 +65,11 @@ if (isset($_GET['logout'])) {
         <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
           <span class="sr-only">Toggle navigation</span>
         </a>
+        <?php if (@$_SESSION['logged'] == false) : ?>
+          <a href="login.php" style="float:right" role="button">
+            <span style="float:right; padding: 14px 16px; font-size:medium; color: white; background-color: #5bc0de"><b>Login</b></span>
+          </a>
+        <?php endif ?>
         <div class="navbar-custom-menu">
           <ul class="nav navbar-nav">
 
@@ -147,14 +152,6 @@ if (isset($_GET['logout'])) {
             <li class="<?= (@$_GET['p'] == 'alternatif') ? 'active' : '' ?>">
               <a href="?p=alternatif">
                 <i class="fa fa-envelope"></i> <span>Alternatif</span>
-              </a>
-            </li>
-            <li>
-              <!-- <a href="login.php" style="float:right" role="button"> -->
-              <a href="login.php" role="button">
-                <!-- <span style="float:right; padding: 14px 16px; font-size:medium; color: white; background-color: #5bc0de"><b>Login</b></span> -->
-                <span style="font-size:medium; color: white; "><b>Login</b></span>
-                <!-- <i class="fa fa-envelope"></i> <span>Login</span> -->
               </a>
             </li>
             <!-- <li class="<?= (@$_GET['p'] == 'rank') ? 'active' : '' ?>">
@@ -244,6 +241,7 @@ if (isset($_GET['logout'])) {
             else
               include 'page/alternatif/pilihbidang.php';
             break;
+
           case 'report':
             include 'page/laporan/index.php';
             break;
