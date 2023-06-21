@@ -130,7 +130,7 @@ if (isset($_GET['logout'])) {
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="?p=criteria&act=create"><i class="fa fa-circle-o"></i> Tambah Kriteria </a></li>
+                <!-- <li><a href="?p=criteria&act=create"><i class="fa fa-circle-o"></i> Tambah Kriteria </a></li> -->
                 <li><a href="?p=criteria"><i class="fa fa-circle-o"></i> Data Kriteria</a></li>
               </ul>
             </li>
