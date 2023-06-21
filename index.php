@@ -70,6 +70,13 @@ if (isset($_GET['logout'])) {
             <span style="float:right; padding: 14px 16px; font-size:medium; color: white; background-color: #5bc0de"><b>Login</b></span>
           </a>
         <?php endif ?>
+        <?php if (@$_SESSION['logged'] == true) : ?>
+          <!-- <li class="header">OTHER</li> -->
+          <!-- <li><a href="?logout"><i class="fa fa-circle-o text-red"></i> <span>Logout</span></a></li> -->
+          <a href="?logout" style="float:right" role="button">
+            <span style="float:right; padding: 14px 16px; font-size:medium; color: white; background-color: #5bc0de"><b>Logout</b></span>
+          </a>
+        <?php endif; ?>
         <div class="navbar-custom-menu">
           <ul class="nav navbar-nav">
 
@@ -159,11 +166,6 @@ if (isset($_GET['logout'])) {
               <i class="fa fa-envelope"></i> <span>Laporan</span>
             </a>
           </li> -->
-          <?php endif; ?>
-
-          <?php if (@$_SESSION['logged'] == true) : ?>
-            <li class="header">OTHER</li>
-            <li><a href="?logout"><i class="fa fa-circle-o text-red"></i> <span>Logout</span></a></li>
           <?php endif; ?>
         </ul>
       </section>
