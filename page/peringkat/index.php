@@ -204,6 +204,7 @@ mysqli_query($con, $sql);
                   if ($hasil > $ranking) {
                     $ranking = $hasil;
                     $nama = $row['nama_project'];
+                    $bidang = $row['bidang'];
                   }
                   ?>
                 </td>
@@ -212,7 +213,7 @@ mysqli_query($con, $sql);
           </tbody>
           <tfoot>
             <tr>
-              <th colspan="<?= $count + 4 ?>" class="text-center">Program kerja <?= $_GET['d'] ?>yang disarankan paling pertama yaitu <?= $nama ?> dengan perolehan total <?= $ranking ?></th>
+              <th colspan="<?= $count + 4 ?>" class="text-center">Program kerja <?= $bidang ?> yang disarankan paling pertama yaitu <?= $nama ?> dengan perolehan total <?= $ranking ?></th>
             </tr>
           </tfoot>
         </table>

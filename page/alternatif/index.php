@@ -23,7 +23,7 @@ if (isset($_POST['simpan'])) {
     mysqli_query($con, $sql);
   }
 
-  echo "<script>alert('Data berhasil disimpan!');window.location.href='index.php?p=alternatif</script>";
+  echo "<script>alert('Data berhasil disimpan!');window.location.href='index.php?p=alternatif'</script>";
 }
 
 ?>
