@@ -15,14 +15,14 @@
 	  <div class="callout callout-info">
 	    <h4>Selamat datang <?= $_SESSION['name'] ?></h4>
 
-	    <p>Sistem Pendukung Keputusan Projet KKN dengan Metode Fuzzy AHP</p>
+	    <p>Sistem Pendukung Keputusan dalam Memilih Desa yang Sesuai dengan Program Kerja KKN dengan Metode Fuzzy AHP</p>
 	  </div>
 	<?php else : ?>
 
 	  <div class="callout callout-info">
 	    <h4>Halo, Selamat Datang!</h4>
 
-	    <p>Website ini merupakan website sistem pendukung keputusan dalam memilih program kerja yang sesuai dengan desa tempat pelaksanaan KKN</p>
+	    <p>Website ini merupakan website sistem pendukung keputusan dalam memilih desa yang sesuai dengan program kerja KKN</p>
 
 	  </div>
 	  <div class="grid-container">
