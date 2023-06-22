@@ -26,6 +26,8 @@ if (isset($_POST['simpan'])) {
               <option value="kesehatan">Kesehatan</option>
               <option value="pendidikan">Pendidikan</option>
               <option value="teknologi">Teknologi</option>
+              <option value="lingkungan">Lingkungan</option>
+              <option value="pertanian">Pertanian</option>
             </select>
           </div>
         </div>
