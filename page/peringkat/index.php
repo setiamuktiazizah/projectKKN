@@ -212,7 +212,7 @@ mysqli_query($con, $sql);
           </tbody>
           <tfoot>
             <tr>
-              <th colspan="<?= $count + 4 ?>" class="text-center">Rangking pertama diraih oleh <?= $nama ?> dengan perolehan total <?= $ranking ?></th>
+              <th colspan="<?= $count + 4 ?>" class="text-center">Alternatif program kerja yang disarankan paling pertama yaitu <?= $nama ?> dengan perolehan total <?= $ranking ?></th>
             </tr>
           </tfoot>
         </table>
