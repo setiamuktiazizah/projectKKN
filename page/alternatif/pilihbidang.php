@@ -13,21 +13,21 @@ if (isset($_POST['simpan'])) {
     <!-- general form elements -->
     <div class="box box-primary">
       <div class="box-header with-border">
-        <h3 class="box-title">Pilih Bidang Project KKN</h3>
+        <h3 class="box-title">Pilih Program Kerja KKN</h3>
       </div>
       <!-- /.box-header -->
       <!-- form start -->
       <form role="form" method="post">
         <div class="box-body">
           <div class="form-group">
-            <label for="exampleInputEmail1">Bidang</label>
+            <label for="exampleInputEmail1">Program Kerja</label>
             <select name="bidang" class="form-control">
               <option value="">-- Pilih Bidang --</option>
-              <option value="kesehatan">Kesehatan</option>
-              <option value="pendidikan">Pendidikan</option>
               <option value="teknologi">Teknologi</option>
-              <option value="lingkungan">Lingkungan</option>
-              <option value="pertanian">Pertanian</option>
+              <option value="kesehatan">Penyuluhan terkait isu kesehatan (kebersihan, pola makan sehat, pencegahan penyakit, pentingnya imunisasi)</option>
+              <option value="kesehatan2">Pemeriksaan kesehatan gratis (pemeriksaan tekanan darah, gula darah, pengukuran berat badan, dsb)</option>
+              <option value="kesehatan3">Pelatihan pertolongan pertama kepada masyaratakt, termasuk penanganan luka, pernapasan buatan, pendarahan, dan pengelolaan trauma</option>
+              <option value="pendidikan1">Kegiatan bimbingan belajar dalam membantu siswa memahami pelajaran dan meningkatkan kemampuan akademik mereka dengan menerapkan metode pembelajaran yang inovatif'</option>
             </select>
           </div>
         </div>

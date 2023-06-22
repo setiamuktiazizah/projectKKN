@@ -23,7 +23,7 @@ if (isset($_POST['simpan'])) {
     mysqli_query($con, $sql);
   }
 
-  echo "<script>alert('Data berhasil disimpan!');window.location.href='index.php?p=alternatif'</script>";
+  echo "<script>alert('Data berhasil disimpan!');window.location.href='index.php?p=alternatif</script>";
 }
 
 ?>
@@ -41,7 +41,7 @@ if (isset($_POST['simpan'])) {
       <form role="form" method="post">
         <div class="box-body">
           <div class="form-group">
-            <label for="exampleInputEmail1">Alternatif</label>
+            <label for="exampleInputEmail1">Alternatif Desa</label>
             <select name="project" id="" class="form-control" required>
               <option value="">-- Pilih Alternatif --</option>
               <?php

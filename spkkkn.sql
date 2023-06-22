@@ -40,9 +40,38 @@ CREATE TABLE `alternatif` (
 -- Table structure for table `cabai`
 --
 
+-- CREATE TABLE `project` (
+--   `id_project` int(11) NOT NULL,
+--   `nama_project` varchar(125) NOT NULL,
+--   `bidang` varchar(25) NOT NULL
+-- ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --
+-- -- Dumping data for table `project`
+-- --
+
+-- INSERT INTO `project` (`id_project`, `nama_project`, `bidang`) VALUES
+-- (1, 'Penyuluhan terkait isu kesehatan (kebersihan, pola makan sehat, pencegahan penyakit, pentingnya imunisasi)', 'kesehatan'),
+-- (2, 'Pemeriksaan kesehatan gratis (pemeriksaan tekanan darah, gula darah, pengukuran berat badan, dsb)', 'kesehatan'),
+-- (3, 'Pelatihan pertolongan pertama kepada masyaratakt, termasuk penanganan luka, pernapasan buatan, pendarahan, dan pengelolaan trauma', 'kesehatan'),
+-- (4, 'Kegiatan bimbingan belajar dalam membantu siswa memahami pelajaran dan meningkatkan kemampuan akademik mereka dengan menerapkan metode pembelajaran yang inovatif', 'pendidikan'),
+-- (5, 'Penyuluhan pentingnya pendidikan bagi anak ', 'pendidikan'),
+-- (6, 'Pelatihan guru untuk meningkatkan keterampilan dan pengetahuan guru dalam pengajaran dan manajemen kelas', 'pendidikan'),
+-- (7, 'Pelatihan dasar-dasar komputer (ms.office)', 'teknologi'),
+-- (8, 'Membangun aplikasi atau web yang dibutuhkan di desa', 'teknologi'),
+-- (9, 'Membantu memperbaiki atau membangun sarana air bersih, seperti sumur bor atau instalasi air bersih sederhana', 'lingkungan'),
+-- (10, 'Mengadakan kegiatan kerja bakti lingkungan', 'lingkungan'),
+-- (11, 'Membuat jalur mitigasi bencana', 'lingkungan'),
+-- (12, 'Mengadakan kegiatan penyuluhan dan pelatihan kepada masyarakat tentang mitigasi bencana, termasuk pengetahuan tentang risiko bencana, identifikasi bahaya dan langkah pencegahan yang dapat diambil', 'lingkungan'),
+-- (13, 'Mengadakan kegiatan daur ulang sampah menjadi barang yang berguna', 'lingkungan'),
+-- (14, 'Penyuluhan mengenai teknik bercocok tanam, kondisi tanaman yang sesuai berdasarkan jenis tanah, iklim, dll.', 'pertanian'),
+-- (15, 'Pelatihan mengenai pembuatan dan perawatan tanaman hidroponik', 'pertanian');
+
+-- --------------------------------------------------------
+
 CREATE TABLE `project` (
   `id_project` int(11) NOT NULL,
-  `nama_project` varchar(125) NOT NULL,
+  `nama_project` varchar(1000) NOT NULL,
   `bidang` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -51,23 +80,32 @@ CREATE TABLE `project` (
 --
 
 INSERT INTO `project` (`id_project`, `nama_project`, `bidang`) VALUES
-(1, 'Penyuluhan terkait isu kesehatan (kebersihan, pola makan sehat, pencegahan penyakit, pentingnya imunisasi)', 'kesehatan'),
-(2, 'Pemeriksaan kesehatan gratis (pemeriksaan tekanan darah, gula darah, pengukuran berat badan, dsb)', 'kesehatan'),
-(3, 'Pelatihan pertolongan pertama kepada masyaratakt, termasuk penanganan luka, pernapasan buatan, pendarahan, dan pengelolaan trauma', 'kesehatan'),
-(4, 'Kegiatan bimbingan belajar dalam membantu siswa memahami pelajaran dan meningkatkan kemampuan akademik mereka dengan menerapkan metode pembelajaran yang inovatif', 'pendidikan'),
-(5, 'Penyuluhan pentingnya pendidikan bagi anak ', 'pendidikan'),
-(6, 'Pelatihan guru untuk meningkatkan keterampilan dan pengetahuan guru dalam pengajaran dan manajemen kelas', 'pendidikan'),
-(7, 'Pelatihan dasar-dasar komputer (ms.office)', 'teknologi'),
-(8, 'Membangun aplikasi atau web yang dibutuhkan di desa', 'teknologi'),
-(9, 'Membantu memperbaiki atau membangun sarana air bersih, seperti sumur bor atau instalasi air bersih sederhana', 'lingkungan'),
-(10, 'Mengadakan kegiatan kerja bakti lingkungan', 'lingkungan'),
-(11, 'Membuat jalur mitigasi bencana', 'lingkungan'),
-(12, 'Mengadakan kegiatan penyuluhan dan pelatihan kepada masyarakat tentang mitigasi bencana, termasuk pengetahuan tentang risiko bencana, identifikasi bahaya dan langkah pencegahan yang dapat diambil', 'lingkungan'),
-(13, 'Mengadakan kegiatan daur ulang sampah menjadi barang yang berguna', 'lingkungan'),
-(14, 'Penyuluhan mengenai teknik bercocok tanam, kondisi tanaman yang sesuai berdasarkan jenis tanah, iklim, dll.', 'pertanian'),
-(15, 'Pelatihan mengenai pembuatan dan perawatan tanaman hidroponik', 'pertanian');
+(1,'desa Ponggok, Klaten ', 'kesehatan'),
+(2,'desa Janti, Klaten', 'kesehatan'),
+(3,'desa Delanggu, Klaten', 'kesehatan'),
+(4,'desa Teloyo, Klaten', 'kesehatan'),
+(5,'desa Kedunglumbu, Surakarta', 'kesehatan'),
+(6, 'desa Ponggok, Klaten ','kesehatan2'),
+(7, 'desa Janti, Klaten','kesehatan2'),
+(8, 'desa Kedunglumbu, Surakarta','kesehatan2'),
+(9, 'desa Delanggu, Klaten','kesehatan2'),
+(10, 'desa Teloyo, Klaten','kesehatan2'),
+(11, 'desa Ponggok, Klaten ', 'kesehatan3'),
+(12, 'desa Janti, Klaten', 'kesehatan3'),
+(13, 'desa Delanggu, Klaten', 'kesehatan3'),
+(14, 'desa Teloyo, Klaten', 'kesehatan3'),
+(15, 'desa Kedunglumbu, Surakarta', 'kesehatan3'),
+(16, 'desa Ponggok, Klaten ', 'pendidikan1'),
+(17, 'desa Janti, Klaten', 'pendidikan1'),
+(18, 'desa Delanggu, Klaten','pendidikan1'),
+(19, 'desa Teloyo, Klaten', 'pendidikan1'),
+(20, 'desa Kedunglumbu, Surakarta', 'pendidikan1'),
+(21, 'desa Ponggok, Klaten ', 'teknologi'),
+(22, 'desa Janti, Klaten', 'teknologi'),
+(23, 'desa Delanggu, Klaten','teknologi'),
+(24, 'desa Teloyo, Klaten', 'teknologi'),
+(25, 'desa Kedunglumbu, Surakarta', 'teknologi');
 
--- --------------------------------------------------------
 
 --
 -- Table structure for table `desc_kriteria`
