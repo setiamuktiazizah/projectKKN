@@ -26,8 +26,8 @@ if (isset($_GET['delete'])) {
           <thead>
             <tr>
               <th>Id</th>
-              <th>Kriteria</th>
-              <th>Bidang</th>
+              <th>Desa</th>
+              <th>Program Kerja</th>
               <th>Aksi</th>
             </tr>
           </thead>

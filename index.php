@@ -121,14 +121,14 @@ if (isset($_GET['logout'])) {
             </li>
             <li class="treeview <?= (@$_GET['p'] == 'project') ? 'active' : '' ?>">
               <a href="#">
-                <i class="fa fa-calendar"></i> <span>Project KKN</span>
+                <i class="fa fa-calendar"></i> <span>Desa KKN</span>
                 <span class="pull-right-container">
                   <i class="fa fa-angle-left pull-right"></i>
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="?p=project&act=create"><i class="fa fa-circle-o"></i> Tambah Project KKN </a></li>
-                <li><a href="?p=project"><i class="fa fa-circle-o"></i> Data Project KKN</a></li>
+                <li><a href="?p=project&act=create"><i class="fa fa-circle-o"></i> Tambah Desa KKN </a></li>
+                <li><a href="?p=project"><i class="fa fa-circle-o"></i> Data Desa KKN</a></li>
               </ul>
             </li>
             <li class="treeview <?= (@$_GET['p'] == 'criteria') ? 'active' : '' ?>">
